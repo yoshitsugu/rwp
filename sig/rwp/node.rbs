@@ -1,0 +1,5 @@
+module Rwp
+  class Node
+    def initialize: (IO input) -> void
+  end
+end

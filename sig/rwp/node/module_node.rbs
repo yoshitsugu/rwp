@@ -1,0 +1,8 @@
+module Rwp
+  class ModuleNode < Node
+    attr_reader magic: Array[Integer]
+    attr_reader version: Array[Integer]
+
+    def initialize: (IO input) -> void
+  end
+end
