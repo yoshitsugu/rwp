@@ -5,10 +5,10 @@ module Rwp
     # @dynamic magic, version
     attr_reader :magic, :version
 
-    def initialize(input)
-      super(input)
-      @magic = input.read(4)&.bytes || []
-      @version = input.read(4)&.bytes || []
+    def initialize(buffer)
+      super(buffer)
+      @magic = buffer.read_bytes(4)
+      @version = buffer.read_bytes(4)
     end
   end
 end

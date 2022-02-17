@@ -1,0 +1,10 @@
+module Rwp
+  class Buffer
+    @buffer: IO
+    
+    def initialize: (IO buffer) -> void
+    def read_bytes: (Integer n) -> Array[Integer]
+    def read_byte: () -> Integer?
+  end
+end
+      

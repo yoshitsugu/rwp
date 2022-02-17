@@ -3,6 +3,6 @@ module Rwp
     attr_reader magic: Array[Integer]
     attr_reader version: Array[Integer]
 
-    def initialize: (IO input) -> void
+    def initialize: (Rwp::Buffer buffer) -> void
   end
 end

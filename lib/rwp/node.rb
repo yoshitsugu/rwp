@@ -2,6 +2,6 @@
 
 module Rwp
   class Node
-    def initialize(node); end
+    def initialize(buffer); end
   end
 end

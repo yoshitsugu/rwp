@@ -1,5 +1,5 @@
 module Rwp
   class Node
-    def initialize: (IO input) -> void
+    def initialize: (Rwp::Buffer buffer) -> void
   end
 end
