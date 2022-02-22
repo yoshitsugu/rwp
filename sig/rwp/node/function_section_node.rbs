@@ -1,5 +1,9 @@
 module Rwp
   class FunctionSectionNode < SectionNode
+    type type_idx = Integer
+    attr_reader type_idxs: Array[type_idx]
+
+    def initialize: () -> void
     def load: (Rwp::Buffer buffer) -> void
   end
 end
