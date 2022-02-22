@@ -4,10 +4,16 @@ AllCops:
 
 Metrics/MethodLength:
   Max: 30
+  Exclude:
+    - test/**/*
 Metrics/AbcSize:
   Max: 50
+  Exclude:
+    - test/**/*
 Layout/LineLength:
   Max: 200
+  Exclude:
+    - test/**/*
 Style/Documentation:
   Enabled: false
 Style/AsciiComments:

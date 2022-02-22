@@ -40,4 +40,20 @@ class TestRwp < Minitest::Test
       assert_equal 11, code.func.expr.end_op
     end
   end
+
+  def test_it_can_parse_local_wasm
+    filename = File.join(File.dirname(__FILE__), 'data/local.wasm')
+    File.open(filename) do |file|
+      buffer = Rwp::Buffer.new(file)
+      parsed = Rwp::Parser.new.parse(buffer)
+      code_section = parsed.sections.last
+      assert_equal 1, code_section.codes.length
+      code = code_section.codes.first
+      assert_equal 1, code.func.localses.length
+      assert_equal 1, code.func.localses.first.num
+      assert_equal 127, code.func.localses.first.val_type
+      assert_equal 33, code.func.expr.instrs[1].opcode
+      assert_equal 32, code.func.expr.instrs[2].opcode
+    end
+  end
 end

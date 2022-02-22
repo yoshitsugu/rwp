@@ -5,6 +5,8 @@ require_relative 'instr_node'
 module Rwp
   module OP
     I32_CONST = 0x41
+    LOCAL_GET = 0x20
+    LOCAL_SET = 0x21
     OP_END = 0x0b
   end
 

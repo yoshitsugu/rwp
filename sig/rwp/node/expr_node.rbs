@@ -1,6 +1,8 @@
 module Rwp
   module OP
     I32_CONST: 65 # 0x41
+    LOCAL_GET: 32 # 0x20
+    LOCAL_SET: 33 # 0x21
     OP_END: 11 # 0x0b
     type opcode = 65 | 11
   end

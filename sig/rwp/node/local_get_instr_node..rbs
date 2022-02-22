@@ -1,0 +1,8 @@
+module Rwp
+  class LocalGetInstrNode
+    include ::Rwp::_InstrNode
+
+    @opcode: Rwp::OP::opcode
+    attr_reader local_idx: Integer
+  end
+end
