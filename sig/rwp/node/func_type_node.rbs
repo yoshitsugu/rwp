@@ -1,0 +1,9 @@
+module Rwp
+  class FuncTypeNode
+    TAG: Integer
+
+    attr_reader param_type: Rwp::ResultTypeNode
+    attr_reader result_type: Rwp::ResultTypeNode
+    def load: (Rwp::Buffer buffer) -> void
+  end
+end

@@ -2,7 +2,9 @@ module Rwp
   class ModuleNode < Node
     attr_reader magic: Array[Integer]
     attr_reader version: Array[Integer]
+    attr_reader sections: Array[Rwp::SectionNode]
 
     def initialize: (Rwp::Buffer buffer) -> void
+    def load_section: (Rwp::Buffer buffer) -> Rwp::SectionNode
   end
 end

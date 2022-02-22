@@ -1,0 +1,8 @@
+type section_nodes = Rwp::TypeSectionNode | Rwp::FunctionSectionNode | Rwp::CodeSectionNode
+
+module Rwp
+  class SectionNode
+    def self.create: (Integer section_id) -> section_nodes
+    def load: (Rwp::Buffer buffer) -> void
+  end
+end

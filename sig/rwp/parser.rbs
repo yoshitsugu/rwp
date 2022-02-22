@@ -1,5 +1,5 @@
 module Rwp
   class Parser
-    def parse: (IO input) -> Rwp::Node
+    def parse: (Rwp::Buffer buffer) -> Rwp::Node
   end
 end

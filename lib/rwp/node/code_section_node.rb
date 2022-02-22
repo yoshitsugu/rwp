@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 module Rwp
-  class Node
-    def initialize(buffer); end
+  class CodeSectionNode < SectionNode
   end
 end

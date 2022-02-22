@@ -1,0 +1,8 @@
+module Rwp
+  class ResultTypeNode
+    attr_reader val_types: Array[Rwp::TypeSectionNode::val_type]
+
+    def initialize: -> void
+    def load: (Rwp::Buffer buffer) -> void
+  end
+end

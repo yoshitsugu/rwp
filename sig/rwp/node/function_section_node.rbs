@@ -1,0 +1,5 @@
+module Rwp
+  class FunctionSectionNode < SectionNode
+    def load: (Rwp::Buffer buffer) -> void
+  end
+end

@@ -2,8 +2,8 @@
 
 module Rwp
   class Parser
-    def parse(input)
-      ModuleNode.new(input)
+    def parse(buffer)
+      ModuleNode.new(buffer)
     end
   end
 end

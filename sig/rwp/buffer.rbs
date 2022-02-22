@@ -1,10 +1,18 @@
+type iolike = IO | StringIO
+
 module Rwp
   class Buffer
-    @buffer: IO
-    
-    def initialize: (IO buffer) -> void
+    @buffer: iolike
+    attr_reader bytesize: Integer
+
+    def initialize: (iolike buffer) -> void
     def read_bytes: (Integer n) -> Array[Integer]
     def read_byte: () -> Integer?
+    def read_buffer: (?Integer size) -> Rwp::Buffer
+    def read_u32: () -> Integer
+    def read_i32: () -> Integer
+    def read_vec: [T] () { (Rwp::Buffer buf) -> T } -> Array[T]
+    def eof?: () -> bool
   end
 end
-      
+

@@ -1,0 +1,18 @@
+module Rwp
+  class TypeSectionNode < SectionNode
+    attr_reader func_types: Array[Rwp::FuncTypeNode]
+
+    def initialize: -> void
+    def load: (Rwp::Buffer buffer) -> void
+
+    type i32_type = 127 # 0x7f
+    type i64_type = 126 # 0x7e
+    type f32_type = 125 # 0x7d
+    type f64_type = 124 # 0x7c
+    type num_type = i32_type | i64_type | f32_type | f64_type
+    type func_ref = 112 # 0x70
+    type extern_ref = 111 # 0x6f
+    type ref_type = func_ref | extern_ref
+    type val_type = num_type | ref_type
+  end
+end
