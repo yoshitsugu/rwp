@@ -15,16 +15,13 @@ class TestRwp < Minitest::Test
   end
 
   def test_it_can_parse_type_section
-    filename = File.join(File.dirname(__FILE__), 'data/module.wasm')
-    File.open(filename) do |_file|
-      buffer = Rwp::Buffer.new(StringIO.new("\x00\x61\x73\x6d\x01\x00\x00\x00\x01\x05\x01\x60\x00\x01\x7f"))
-      parsed = Rwp::Parser.new.parse(buffer)
-      type_section = parsed.sections.first
-      assert_equal Rwp::TypeSectionNode, type_section.class
-      func_type = type_section.func_types.first
-      assert_equal 0, func_type.param_type.val_types.length
-      assert_equal 1, func_type.result_type.val_types.length
-      assert_equal 127, func_type.result_type.val_types.first
-    end
+    buffer = Rwp::Buffer.new(StringIO.new("\x00\x61\x73\x6d\x01\x00\x00\x00\x01\x05\x01\x60\x00\x01\x7f"))
+    parsed = Rwp::Parser.new.parse(buffer)
+    type_section = parsed.sections.first
+    assert_equal Rwp::TypeSectionNode, type_section.class
+    func_type = type_section.func_types.first
+    assert_equal 0, func_type.param_type.val_types.length
+    assert_equal 1, func_type.result_type.val_types.length
+    assert_equal 127, func_type.result_type.val_types.first
   end
 end
