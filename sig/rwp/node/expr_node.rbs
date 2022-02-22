@@ -1,0 +1,15 @@
+module Rwp
+  module OP
+    I32_CONST: 65 # 0x41
+    OP_END: 11 # 0x0b
+    type opcode = 65 | 11
+  end
+
+  class ExprNode < SectionNode
+    attr_reader instrs: Array[Rwp::_InstrNode]
+    attr_reader end_op: Rwp::OP::opcode
+
+    def initialize: () -> void
+    def load: (Rwp::Buffer buffer) -> void
+  end
+end

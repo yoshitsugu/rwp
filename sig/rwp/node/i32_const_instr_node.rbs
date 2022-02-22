@@ -1,0 +1,8 @@
+module Rwp
+  class I32ConstInstrNode
+    include ::Rwp::_InstrNode
+
+    @opcode: Rwp::OP::opcode
+    attr_reader num: Integer
+  end
+end

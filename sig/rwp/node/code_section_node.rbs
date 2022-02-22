@@ -1,5 +1,8 @@
 module Rwp
   class CodeSectionNode < SectionNode
+    attr_reader codes: Array[Rwp::CodeNode]
+
+    def initialize: () -> void
     def load: (Rwp::Buffer buffer) -> void
   end
 end

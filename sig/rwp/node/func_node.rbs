@@ -1,0 +1,9 @@
+module Rwp
+  class FuncNode < SectionNode
+    attr_reader localses: Array[Rwp::LocalsNode]
+    attr_reader expr: Rwp::ExprNode?
+
+    def initialize: () -> void
+    def load: (Rwp::Buffer buffer) -> void
+  end
+end

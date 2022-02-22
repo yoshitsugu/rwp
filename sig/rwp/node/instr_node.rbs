@@ -1,0 +1,11 @@
+module Rwp
+  class InstrNode
+    def self.create: (Rwp::OP::opcode opcode) -> Rwp::_InstrNode?
+  end
+
+  interface _InstrNode
+    def initialize: (Rwp::OP::opcode opcode) -> void
+    def load: (Rwp::Buffer buffer) -> void
+    def opcode: () -> Rwp::OP::opcode
+  end
+end

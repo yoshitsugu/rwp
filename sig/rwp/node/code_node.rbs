@@ -1,0 +1,8 @@
+module Rwp
+  class CodeNode < SectionNode
+    attr_reader size: Integer?
+    attr_reader func: Rwp::FuncNode
+
+    def load: (Rwp::Buffer buffer) -> void
+  end
+end

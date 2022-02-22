@@ -1,0 +1,8 @@
+module Rwp
+  class LocalsNode < SectionNode
+    attr_reader num: Integer?
+    attr_reader val_type: Rwp::TypeSectionNode::val_type?
+
+    def load: (Rwp::Buffer buffer) -> void
+  end
+end

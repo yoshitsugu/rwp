@@ -11,7 +11,6 @@ module Rwp
 
     def load(buffer)
       @val_types = buffer.read_vec do |buf|
-        # @type var byte: Rwp::TypeSectionNode::val_type
         byte = _ = buf.read_byte
         raise 'Cannot load ResultTypeNode' if byte.nil?
 
